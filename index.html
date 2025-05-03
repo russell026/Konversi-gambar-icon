@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Image Converter</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Image Converter</h1>
+        <p>Convert your images to the required size and format using JavaScript.</p>
+        
+        <form id="image-form">
+            <label for="fileInput">Upload an image:</label>
+            <input type="file" id="fileInput" name="file" required accept="image/*">
+            
+            <label for="sizeSelect">Select size:</label>
+            <select id="sizeSelect" name="size">
+                <option value="100x100">100x100 (Avatar)</option>
+                <option value="800x600">800x600 (Gallery Image)</option>
+                <option value="1200x800">1200x800 (Blog Post Image)</option>
+            </select>
+
+            <button type="submit">Convert Image</button>
+        </form>
+
+        <div id="result">
+            <h3>Converted Image:</h3>
+            <img id="convertedImage" src="" alt="Converted Image" style="max-width: 100%; display:none;"/>
+            <a id="downloadLink" href="#" download>Download Converted Image</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
